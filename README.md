@@ -40,3 +40,7 @@ This Python script automates the process of replacing Slack integrations with Te
 
 3. Check the target folder and change that were made. Double check them to make sure it's all good
 4. Run the tests
+
+# Warning
+
+This will delete any comments in the config files. So make sure to add them back in when you've run the script

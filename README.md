@@ -35,7 +35,7 @@ This Python script automates the process of replacing Slack integrations with Te
 2. Run the script:
 
    ```
-   python index.py
+   python src/index.py
    ```
 
 3. Check the target folder and change that were made. Double check them to make sure it's all good

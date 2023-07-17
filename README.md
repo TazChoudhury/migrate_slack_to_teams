@@ -30,7 +30,7 @@ This Python script automates the process of replacing Slack integrations with Te
 
 ## Usage
 
-1. Update the constants in the script (at the top of the script) with your specific values. The constants are: `TEMPLATE_FOLDER`, `SERVICE_NAME`, `TARGET_REPO_FOLDER`, `PRIMARY_BRANCH` `TICKET_NUMBER`, `PYTHON_VERSION`, `ENV_NAME`, `DEV_CHANNEL`, and `PROD_CHANNEL`.
+1. Update the constants in the script (at the top of the script) with your specific values. The constants are: `TEMPLATE_FOLDER`, `SERVICE_NAME`, `TARGET_REPO_FOLDER`, `PRIMARY_BRANCH` `TICKET_NUMBER`, `PYTHON_VERSION`, `ENV_NAME`, `TEAMS_WEBHOOK_URL`, `DEV_CHANNEL`, and `PROD_CHANNEL`.
 
 2. Run the script:
 

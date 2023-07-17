@@ -15,9 +15,7 @@ PRIMARY_BRANCH = "main"
 TICKET_NUMBER = "ticket-number"
 
 # Teams channel names
-DEV_CHANNEL = "dev_channel_name"
-PROD_CHANNEL = "prod_channel_name"
-
+TEAMS_WEBHOOK_SECRET = "path/to/secret"
 
 print("Starting script")
 # Switch to branch main, stash any change, pull, and create a new branch
@@ -108,6 +106,9 @@ for config_file in glob.glob(os.path.join(TARGET_REPO_FOLDER, 'config', '*.ini')
         config.remove_section('SLACK')
     if 'TEAMS' not in config:
         config.add_section('TEAMS')
+    if 'SECRETS' not in config:
+        config.add_section('SECRETS')
+    config.set('SECRETS', 'TEAMS_WEBHOOK_SECRET', TEAMS_WEBHOOK_SECRET)
     if os.path.basename(config_file) in ['config_dev.ini']:
         config.set('TEAMS', 'TEAMS_NOTIFICATIONS_CHANNEL', DEV_CHANNEL)
         config.set('TEAMS', 'TEAMS_NOTIFICATIONS_ENABLED', 'True')

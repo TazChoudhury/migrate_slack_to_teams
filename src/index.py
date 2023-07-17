@@ -108,7 +108,7 @@ for config_file in glob.glob(os.path.join(TARGET_REPO_FOLDER, 'config', '*.ini')
         config.add_section('TEAMS')
     if 'SECRETS' not in config:
         config.add_section('SECRETS')
-    config.set('SECRETS', 'TEAMS_WEBHOOK_SECRET', TEAMS_WEBHOOK_SECRET)
+    config.set('SECRETS', 'TEAMS_INCOMING_WEBHOOK', TEAMS_WEBHOOK_SECRET)
     if os.path.basename(config_file) in ['config_dev.ini']:
         config.set('TEAMS', 'TEAMS_NOTIFICATIONS_CHANNEL', DEV_CHANNEL)
         config.set('TEAMS', 'TEAMS_NOTIFICATIONS_ENABLED', 'True')
